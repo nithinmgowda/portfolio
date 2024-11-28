@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --mouse-x: 0.5;
+  --mouse-y: 0.5;
+}
+
+body {
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.bg-gradient {
+  background: radial-gradient(
+    circle at calc(var(--mouse-x) * 100%) calc(var(--mouse-y) * 100%),
+    rgba(147, 51, 234, 0.15),
+    rgba(88, 28, 135, 0.35) 40%,
+    rgba(0, 0, 0, 0.5) 80%
+  );
+  background-color: #0a0a0a;
+  min-height: 100vh;
+  transition: background-position 0.3s ease;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
